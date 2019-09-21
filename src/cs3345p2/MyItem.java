@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyItem implements IDedObject {
-	int itemID;
-	int itemPrice;
-	List<Integer> itemDescription;
+	private int itemID;
+	private int itemPrice;
+	private ArrayList<Integer> itemDescription;
 	
 	MyItem() {
 		itemID = 0;
@@ -14,20 +14,20 @@ public class MyItem implements IDedObject {
 		itemDescription = new ArrayList<>(0);
 	}
 	
-	MyItem(int id, int price, List<Integer> desc) {
+	MyItem(int id, int price, List<Integer> name) {
 		itemID = id;
 		itemPrice = price;
-		itemDescription = desc;
+		itemDescription = (ArrayList<Integer>) name;
 	}
 	
 	public int getID() {
-		return itemID;
+		return this.itemID;
 	}
 	
 	public String printID() {
 		String temp = "Item ID: " + itemID + " Price: $" + itemPrice + " Description: ";
-		for (int i = 0; i < itemDescription.size(); i++) {
-			temp += itemDescription.get(i);
+		for (int i = 0; i < this.itemDescription.size(); i++) {
+			temp += this.itemDescription.get(i) + " ";
 		}
 		return temp;
 	}

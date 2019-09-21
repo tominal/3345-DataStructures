@@ -16,19 +16,14 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>out.txt</name>
+			<type>1</type>
+			<location>H:/software/eclipse/projects/cs3345p2/out.txt</location>
+		</link>
+		<link>
 			<name>t1.txt</name>
 			<type>1</type>
-			<location>C:/Users/fbi_surveillance_hq/Downloads/data(2)/data/t1.txt</location>
-		</link>
-		<link>
-			<name>t2.txt</name>
-			<type>1</type>
-			<location>C:/Users/fbi_surveillance_hq/Downloads/data(2)/data/t2.txt</location>
-		</link>
-		<link>
-			<name>t3.txt</name>
-			<type>1</type>
-			<location>C:/Users/fbi_surveillance_hq/Downloads/data(2)/data/t3.txt</location>
+			<location>H:/software/eclipse/projects/cs3345p2/t1.txt</location>
 		</link>
 	</linkedResources>
 </projectDescription>
