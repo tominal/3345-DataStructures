@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>cs3345p2</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>t1.txt</name>
+			<type>1</type>
+			<location>C:/Users/fbi_surveillance_hq/Downloads/data(2)/data/t1.txt</location>
+		</link>
+		<link>
+			<name>t2.txt</name>
+			<type>1</type>
+			<location>C:/Users/fbi_surveillance_hq/Downloads/data(2)/data/t2.txt</location>
+		</link>
+		<link>
+			<name>t3.txt</name>
+			<type>1</type>
+			<location>C:/Users/fbi_surveillance_hq/Downloads/data(2)/data/t3.txt</location>
+		</link>
+	</linkedResources>
+</projectDescription>
