@@ -25,7 +25,7 @@ public class MyItem implements IDedObject {
 	}
 	
 	public String printID() {
-		String temp = "Item ID: " + itemID + " Price: $" + itemPrice + " Description: ";
+		String temp = itemID + " " + itemPrice + " ";
 		for (int i = 0; i < this.itemDescription.size(); i++) {
 			temp += this.itemDescription.get(i) + " ";
 		}
