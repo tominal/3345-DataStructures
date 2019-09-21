@@ -67,7 +67,7 @@ public class IDedLinkedList<AnyType> {
 		}
 		Node<AnyType> pointer = head.next;
 		// check the rest of the items
-		while(pointer.next != null) {
+		while(pointer != null) {
 			// if pointer matches
 			if(((IDedObject) pointer.data).getID() == id) {
 				// point around the found node
