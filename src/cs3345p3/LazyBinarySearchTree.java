@@ -1,14 +1,35 @@
 package cs3345p3;
 
-import java.util.Queue;
 import java.util.Stack;
+
+/**
+ * 
+ * @author Thomas Johnson
+ * @class CS 3345
+ * @section 001
+ * @semester Fall 2019
+ * @project #3
+ * @description
+ * 		The LazyBinarySearchTree class combines a binary search tree with lazy deletion.
+ * 		The node type of the binary search tree, TreeNode, is privately nested within the class.
+ *
+ */
 
 public class LazyBinarySearchTree {
 
 	LazyBinarySearchTree() {
-		this.root = null;
+		root = null;
 	}
-	
+
+	/**
+	 * insert
+	 * @param key
+	 * @return boolean
+	 * @apiNote
+	 * 		Insert returns true if a key was "inserted."
+	 * 		If a key is undeleted, it is logically inserted.
+	 * 		Traversal is iterative in this method.
+	 */
 	public boolean insert(int key) {
 		
 		if(key < 1 || key > 99)
@@ -30,6 +51,7 @@ public class LazyBinarySearchTree {
 			
 		}
 		
+		// create root if none exists
 		if(pointer == null) {
 			root = new TreeNode(key);
 			return true;
@@ -55,6 +77,15 @@ public class LazyBinarySearchTree {
 		
 	}
 	
+	/**
+	 * delete
+	 * @param key
+	 * @return boolean
+	 * @apiNote
+	 * 		Delete returns true if a key was toggled as deleted.
+	 * 		This method calls on its private method recursiveDelete.
+	 * 		Traversal is recursive.
+	 */
 	public boolean delete(int key) {
 		if(key < 1 || key > 99)
 			throw new IllegalArgumentException();
@@ -62,6 +93,13 @@ public class LazyBinarySearchTree {
 		return recursiveDelete(root, key);
 	}
 	
+	/**
+	 * findMin
+	 * @return Integer
+	 * @apiNote
+	 * 		findMin traverses down to the leftmost node which contains the smallest key.
+	 * 		Traversal is iterative.
+	 */
 	public int findMin() {
 		TreeNode pointer = root;
 		int min = -1;
@@ -75,6 +113,14 @@ public class LazyBinarySearchTree {
 		return min;
 	}
 	
+	/**
+	 * findMax
+	 * @return Integer
+	 * @apiNote
+	 * 		findMax traverses down to the rightmost node which contains the largest key.
+	 * 		An extra check is made to make the largest key the root node.
+	 * 		Traversal is iterative.
+	 */
 	public int findMax() {
 		TreeNode pointer = root;
 		int max = -1;
@@ -92,6 +138,14 @@ public class LazyBinarySearchTree {
 		return max;
 	}
 	
+	/**
+	 * contains
+	 * @param key
+	 * @return boolean
+	 * @apiNote
+	 * 		contains returns true if a key is not deleted.
+	 * 		Traversal is iterative.
+	 */
 	public boolean contains(int key) {
 		
 		if(key < 1 || key > 99)
@@ -121,6 +175,14 @@ public class LazyBinarySearchTree {
 		return false;
 	}
 	
+	/**
+	 * toString
+	 * @return String
+	 * @apiNote
+	 * 		toString builds a string for the program to print out however it decides.
+	 * 		A String is built along with a check to see if a key was deleted.
+	 * 		Traversal is iterative.
+	 */
 	public String toString() {
 		
 		if(root == null)
@@ -146,10 +208,26 @@ public class LazyBinarySearchTree {
 		return str;
 	}
 	
+	/**
+	 * height
+	 * @return Integer
+	 * @apiNote
+	 * 		height returns the depth of the tree.
+	 * 		height calls on its private method height.
+	 * 		Traversal is recursive.
+	 */
 	public int height() {
 		return height(root);
 	}
 	
+	/**
+	 * size
+	 * @return Integer
+	 * @apiNote
+	 * 		size returns the total nodes within the tree.
+	 * 		size calls on its private method size.
+	 * 		Traversal is recursive.
+	 */
 	public int size() {
 		return size(root);
 	}

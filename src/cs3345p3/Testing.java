@@ -2,11 +2,22 @@ package cs3345p3;
 
 import java.io.File;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Scanner;
+
+/**
+ * 
+ * @author Thomas Johnson
+ * @class CS 3345
+ * @section 001
+ * @semester Fall 2019
+ * @project #3
+ * @description
+ * 		The Testing class contains the main operation of the program.
+ * 		The main method requires two arguments. The first is the input file.
+ * 		The second is the output file.
+ *
+ */
 
 public class Testing {
 
@@ -31,7 +42,6 @@ public class Testing {
             int lineno = 0, key;
             boolean result;
 
-	        //whileloop:
 	        while (in.hasNextLine()) {
 			    lineno++;
 
@@ -39,6 +49,7 @@ public class Testing {
 			    
 			    if(operation != "") {
 				    
+			    	// call split here to get the real command
 				    String command = operation.split(":")[0];
 				    
 				    if(command.equals("Insert")) {
@@ -52,7 +63,7 @@ public class Testing {
 			    			} catch (IllegalArgumentException e) {
 			    				out.println("Error in insert: IllegalArgumentException raised");
 			    			}
-			    		} catch (Exception e) {
+			    		} catch (ArrayIndexOutOfBoundsException e) {
 			    			out.println("Error in Line: " + command);
 			    		}
 				    } else if(command.equals("FindMin")) {
@@ -70,7 +81,7 @@ public class Testing {
 			    			} catch (IllegalArgumentException e) {
 			    				out.println("Error in insert: IllegalArgumentException raised");
 			    			}
-			    		} catch (Exception e) {
+			    		} catch (ArrayIndexOutOfBoundsException e) {
 			    			out.println("Error in Line: " + command);
 			    		}
 				    } else if(command.equals("Delete")) {
@@ -84,7 +95,7 @@ public class Testing {
 			    			} catch (IllegalArgumentException e) {
 			    				out.println("Error in insert: IllegalArgumentException raised");
 			    			}
-			    		} catch (Exception e) {
+			    		} catch (ArrayIndexOutOfBoundsException e) {
 			    			out.println("Error in Line: " + command);
 			    		}
 				    } else if(command.equals("PrintTree")) {
